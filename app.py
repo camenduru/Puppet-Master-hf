@@ -2,6 +2,7 @@ import os
 from PIL import Image, ImageOps
 import random
 
+import spaces
 import cv2
 from diffusers import StableVideoDiffusionPipeline
 from diffusers.image_processor import VaeImageProcessor
@@ -11,7 +12,6 @@ import gradio as gr
 import numpy as np
 from safetensors import safe_open
 from segment_anything import build_sam, SamPredictor
-import spaces
 from tqdm import tqdm
 import torch
 
@@ -34,6 +34,7 @@ INSTRUCTION = '''
 2 steps to get started:
 - Upload an image of a dynamic object.
 - Add one or more drags on the object to specify the part-level interactions.
+
 How to add drags:
 - To add a drag, first click on the starting point of the drag, then click on the ending point of the drag, on the Input Image (leftmost).
 - You can add up to 5 drags.

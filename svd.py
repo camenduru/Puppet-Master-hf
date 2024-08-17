@@ -1312,5 +1312,3 @@ class UNetDragSpatioTemporalConditionModel(ModelMixin, ConfigMixin, UNet2DCondit
 
 if __name__ == "__main__":
     puppet_master = UNetDragSpatioTemporalConditionModel(num_drags=5)
-    state_dict = torch.load("ckpts/0800000-ema.pt", map_location="cpu")
-    puppet_master.load_state_dict(state_dict, strict=True)
