@@ -197,11 +197,9 @@ def model_init():
 sam_predictor = sam_init()
 model = model_init()
 pipe = StableVideoDiffusionPipeline.from_pretrained(
-    "/scratch/shared/beegfs/ruining/projects/generative-models/stable-video-diffusion-img2vid",
+    "stabilityai/stable-video-diffusion-img2vid",
     torch_dtype=torch.float16, variant="fp16"
-)
-pipe.vae.to(dtype=torch.float16, device="cuda")
-pipe.image_encoder = pipe.image_encoder.to("cuda")
+).to("cuda")
 
 
 @spaces.GPU(duration=10)
