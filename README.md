@@ -11,3 +11,5 @@ license: cc-by-nc-sa-4.0
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+arxiv.org/abs/2408.04631
