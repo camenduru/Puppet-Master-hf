@@ -198,7 +198,7 @@ sam_predictor = sam_init()
 model = model_init()
 pipe = StableVideoDiffusionPipeline.from_pretrained(
     "stabilityai/stable-video-diffusion-img2vid",
-    torch_dtype=torch.float16, variant="fp16", device="cpu"
+    torch_dtype=torch.float16, variant="fp16", map_location="cpu"
 )
 pipe = pipe.to("cuda")
 
