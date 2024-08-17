@@ -319,7 +319,7 @@ def sample_from_noise(model, scheduler, cond_latent, cond_embedding, drags,
     return latents
 
 
-@spaces.GPU(duration=40)
+@spaces.GPU(duration=100)
 def generate_image(img_cond, seed, cfg_scale, drags_list):
     if img_cond is None:
         gr.Warning("Please preprocess the image first.")
